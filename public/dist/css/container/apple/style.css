@@ -1,0 +1,310 @@
+.section, .header, .lower--header, .product, .footer {
+  display: flex;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+.section--content, .header--content, .ad--title, .footer--block {
+  max-width: 1200px;
+  width: 100%;
+}
+@media all and (width < 1440px) {
+  .section--content, .header--content, .ad--title, .footer--block {
+    max-width: 1100px;
+  }
+}
+@media all and (width < 1260px) {
+  .section--content, .header--content, .ad--title, .footer--block {
+    max-width: 900px;
+  }
+}
+@media all and (width < 1000px) {
+  .section--content, .header--content, .ad--title, .footer--block {
+    max-width: 700px;
+  }
+}
+@media all and (width < 620px) {
+  .section--content, .header--content, .ad--title, .footer--block {
+    max-width: 500px;
+  }
+}
+
+.section--duble {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media all and (width < 1260px) {
+  .section--duble {
+    grid-template-columns: 1fr;
+  }
+}
+
+.header {
+  background-color: #454545;
+}
+
+.header--content {
+  display: flex;
+  padding: 16px 0;
+  justify-content: space-between;
+}
+
+.lower--header {
+  background-color: #FFF;
+}
+
+.ad--title {
+  display: flex;
+  padding: 12px 0;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #1D1D1F;
+}
+
+.header--block {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.header--icon {
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+.header--icon:hover {
+  opacity: 0.7;
+}
+.header--icon:active {
+  opacity: 0.3;
+}
+
+.header--link {
+  color: #DADADA;
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+.header--link:hover {
+  opacity: 0.7;
+}
+.header--link:active {
+  opacity: 0.3;
+}
+
+.header--link {
+  font-size: 12px;
+}
+
+.header--text {
+  text-decoration: none;
+  transition: opacity 0.7s;
+  cursor: pointer;
+  color: #06C;
+}
+.header--text:hover {
+  opacity: 0.7;
+}
+.header--text:active {
+  opacity: 0.3;
+}
+
+.lower--header--right {
+  display: flex;
+}
+
+.arrow {
+  margin-left: 8px;
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+.arrow:hover {
+  opacity: 0.7;
+}
+.arrow:active {
+  opacity: 0.3;
+}
+
+.product--link {
+  color: #06C;
+  position: relative;
+  padding-right: 16px;
+}
+.product--link::after {
+  display: block;
+  content: "";
+  width: 5;
+  height: 9;
+  background-image: url("/svg/arrow.svg");
+  position: absolute;
+  right: 0;
+  top: calc(50% - 4px);
+}
+
+.product--content {
+  display: grid;
+  gap: 20px;
+  text-align: center;
+  align-content: center;
+}
+
+.product--title {
+  font-size: 56px;
+  font-weight: 600;
+}
+
+.product--description {
+  font-size: 28px;
+}
+
+.product--action {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+.product--action:hover {
+  opacity: 0.7;
+}
+.product--action:active {
+  opacity: 0.3;
+}
+
+.product {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.product--big {
+  max-height: 700px;
+  height: 100vh;
+  background-size: cover;
+}
+@media all and (width < 1000px) {
+  .product--big {
+    background-size: 150%;
+    max-height: 500px;
+  }
+}
+
+.product--small {
+  max-height: 580px;
+  height: 100vh;
+  background-size: cover;
+}
+@media all and (width < 1000px) {
+  .product--small {
+    background-size: 150%;
+    max-height: 500px;
+  }
+}
+
+.product--dark {
+  background-color: #000;
+}
+.product--dark .product--title, .product--dark .product--description {
+  color: #F5F5F7;
+}
+
+.product--top .product--content {
+  align-content: flex-start;
+}
+
+.product--bottom .product--content {
+  align-content: flex-end;
+}
+
+.product--light {
+  background-color: #fff;
+}
+.product--light .product--title, .product--light .product--description {
+  color: #1D1D1F;
+}
+
+.product--iphone-pro {
+  background-image: url(/img/iphone_pro.png);
+  background-color: #000;
+}
+
+.product--iphone {
+  background-image: url(/img/iphone.png);
+  background-color: #fafafa;
+}
+
+.product--iwatch {
+  background-image: url(/img/iwatch.png);
+  background-color: #000;
+}
+
+.product--trade_in {
+  background-image: url(/img/trade_in.png);
+  background-color: #FBFBFD;
+}
+
+.product--conference {
+  background-image: url(/img/conference.png);
+  background-color: #000000;
+}
+
+.product--ipad {
+  background-image: url(/img/ipad.png);
+  background-color: #FBFBFB;
+}
+
+.product--small_business {
+  background-image: url(/img/small_business.png);
+  background-color: #000000;
+}
+
+.product--gift {
+  background-image: url(/img/gift.png);
+  background-color: #FBFBFB;
+}
+
+.product--card {
+  background-image: url(/img/card.png);
+  background-color: #FBFBFD;
+}
+
+.product--small .product--title {
+  font-size: 40px;
+}
+.product--small .product--description {
+  font-size: 20px;
+}
+
+.footer {
+  background-color: #F5F5F7;
+}
+
+.footer--block {
+  display: block;
+  margin-top: 39px;
+  margin-bottom: 39px;
+}
+
+.footer--title {
+  color: #1D1D1F;
+  margin-bottom: 20px;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.link--block {
+  align-content: flex-start;
+  text-align: start;
+}
+
+.footer--link {
+  display: block;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  color: #424245;
+  font-family: Roboto;
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=style.css.map */
